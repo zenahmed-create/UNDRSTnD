@@ -1,9 +1,6 @@
 // /app/components/MobileMenu.tsx
 'use client';
 
-import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-
 export default function MobileMenu() {
   return (
     <div className="fixed inset-0 bg-white z-40 pt-20">

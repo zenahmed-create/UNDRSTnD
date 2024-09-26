@@ -1,8 +1,26 @@
 // /app/components/HeroSection.tsx
 
-import { ChevronRight, Play } from 'lucide-react';
+'use client';
+
+import { ChevronRight, Play, Pause } from 'lucide-react';
+import { useState, useRef } from 'react';
 
 export default function HeroSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section className="container mx-auto px-4 pt-32 pb-20 text-center">
       <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Read, click, understand.</h1>
@@ -34,17 +52,34 @@ export default function HeroSection() {
         </a>
       </div>
       <div className="max-w-4xl mx-auto relative">
-        <div className="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
-          <img
-            src="/placeholder.svg?height=720&width=1280"
-            alt="Product demo video placeholder"
+        <div 
+          className="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden shadow-2xl transition-shadow duration-300 hover:shadow-3xl"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <video
+            ref={videoRef}
+            src="/undrstnd_productdemo_edited.mp4"
             className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button className="bg-white bg-opacity-75 rounded-full p-4 text-gray-900 hover:bg-opacity-100 transition-all duration-300">
-              <Play className="w-12 h-12" />
-            </button>
-          </div>
+            preload="metadata"
+            onClick={togglePlay}
+          >
+            Your browser does not support the video tag.
+          </video>
+          {(!isPlaying || isHovering) && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button 
+                onClick={togglePlay}
+                className="bg-white bg-opacity-75 rounded-full p-4 text-gray-900 hover:bg-opacity-100 transition-all duration-300 shadow-lg"
+              >
+                {isPlaying ? (
+                  <Pause className="w-12 h-12" />
+                ) : (
+                  <Play className="w-12 h-12" />
+                )}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

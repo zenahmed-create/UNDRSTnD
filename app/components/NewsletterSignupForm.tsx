@@ -44,7 +44,7 @@ export default function NewsletterSignupForm({ onClose }: Props) {
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        const { data, error } = await supabase
+        const { error } = await supabase
           .from('undrstnd_newsletter')
           .insert([
             {
@@ -52,9 +52,8 @@ export default function NewsletterSignupForm({ onClose }: Props) {
               last_name: formData.lastName,
               email: formData.email
             }
-          ])
-          .select();
-        
+          ]);
+
         if (error) throw error;
         
         console.log('Subscription successful');

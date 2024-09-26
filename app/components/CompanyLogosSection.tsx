@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 // /app/components/CompanyLogosSection.tsx
 
 export default function PopularUseCasesSection() {
@@ -28,12 +30,14 @@ export default function PopularUseCasesSection() {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200 h-full">
-              <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-md">
-                <img
+            <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200 h-full flex items-center justify-center">
+              <div className="relative w-full aspect-square max-w-[400px] max-h-[400px]">
+                <Image
                   src="/CompanyLogoSection.png"
                   alt="Popular use cases illustration"
-                  className="w-full h-full object-cover"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-md"
                 />
               </div>
             </div>

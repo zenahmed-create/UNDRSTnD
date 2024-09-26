@@ -6,7 +6,6 @@ import CompanyLogosSection from './components/CompanyLogosSection';
 import FeaturesSection from './components/FeaturesSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import CTASection from './components/CTASection';
-import NewsletterSignupForm from './components/NewsletterSignupForm';
 
 export default function HomePage() {
   return (
