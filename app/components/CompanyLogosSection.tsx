@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 // /app/components/CompanyLogosSection.tsx
 
 export default function PopularUseCasesSection() {
