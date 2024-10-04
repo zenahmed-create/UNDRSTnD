@@ -24,7 +24,7 @@ export default function PopularUseCasesSection() {
     },
     {
       front: "Instant insights fron real-time browsing",
-      back: "Gain instant insights while browsing any webpage, enabling you to quickly understand complex terms and concepts in real-time without leaving the site."
+      back: "Gain instant insights while browsing any webpage in real-time without leaving the site."
     },
     {
       front: "Boost productivity while learning",
