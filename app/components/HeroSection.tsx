@@ -25,7 +25,7 @@ export default function HeroSection() {
     <section className="container mx-auto px-4 pt-32 pb-20 text-center">
       <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Read, click, understand.</h1>
       <h2 className="text-2xl md:text-3xl text-gray-600 mb-12">
-        UNDRSTnD created Ben to help you get smart.
+        UNDRSTnD created Ben to help you get smart!
       </h2>
       <div className="flex justify-center mb-12">
         <a
