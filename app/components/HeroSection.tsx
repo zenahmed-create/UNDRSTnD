@@ -3,12 +3,33 @@
 'use client';
 
 import { ChevronRight, Play, Pause } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [visibleWords, setVisibleWords] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisibleWords((prev) => Math.min(prev + 1, 3));
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [visibleWords]);
+
+  useEffect(() => {
+    // Start playing the video when the component mounts
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((error) => {
+        console.error("Auto-play was prevented:", error);
+        // Optionally handle the error, e.g., show a play button
+      });
+    }
+  }, []);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -21,11 +42,25 @@ export default function HeroSection() {
     }
   };
 
+  const words = ['Read', 'Click', 'Understand'];
+
   return (
     <section className="container mx-auto px-4 pt-32 pb-20 text-center">
-      <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Read, click, understand.</h1>
+      <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+        {words.map((word, index) => (
+          <span
+            key={word}
+            className={`inline-block transition-opacity duration-500 ${
+              index < visibleWords ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ transitionDelay: `${index * 500}ms` }}
+          >
+            {word}{index < 2 ? ', ' : '.'}
+          </span>
+        ))}
+      </h1>
       <h2 className="text-2xl md:text-3xl text-gray-600 mb-12">
-        UNDRSTnD created Ben to help you get smart!
+        Meet Ben, by UNDRSTnD - Your AI Reading Companion!
       </h2>
       <div className="flex justify-center mb-12">
         <a
@@ -45,7 +80,7 @@ export default function HeroSection() {
             w-72
           "
         >
-          <span>Download Ben</span>
+          <span>Ask Ben Now</span>
           <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
@@ -59,7 +94,9 @@ export default function HeroSection() {
             ref={videoRef}
             src="/undrstnd_productdemo_edited.mp4"
             className="w-full h-full object-cover"
-            preload="metadata"
+            preload="auto"
+            muted // Add this to allow autoplay in most browsers
+            playsInline // Add this for better mobile support
             onClick={togglePlay}
           >
             Your browser does not support the video tag.
