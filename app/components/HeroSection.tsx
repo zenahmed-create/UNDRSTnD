@@ -93,7 +93,7 @@ export default function HeroSection() {
         >
           <video
             ref={videoRef}
-            src="/undrstnd_productdemo_edited.mp4"
+            src="/undrstndproductdemo2.mp4"
             className="w-full h-full object-cover"
             preload="auto"
             muted // Add this to allow autoplay in most browsers
