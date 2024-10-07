@@ -65,7 +65,7 @@ export default function PopularUseCasesSection() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Click On A Tile To Learn How Ben Helps</h3>
+        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Click a tile to learn how Ben can help you</h3>
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
           <div className="w-full md:w-1/2">
             <div className="grid grid-cols-2 gap-8">
