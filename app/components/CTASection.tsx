@@ -16,7 +16,18 @@ export default function CTASection() {
         </p>
         <button
           onClick={() => setIsFormOpen(true)}
-          className="bg-gray-900 text-white px-8 py-4 rounded-md text-lg hover:bg-gray-800 inline-flex items-center transition duration-300 ease-in-out transform hover:scale-105"
+          className="
+            bg-gray-900 text-white 
+            px-8 py-4 rounded-md text-lg 
+            inline-flex items-center 
+            transition-all duration-300 ease-in-out 
+            transform hover:scale-105
+            focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50
+            hover:bg-[#ff5c00] hover:text-white
+          "
+          style={{
+            transition: 'all 0.3s ease',
+          }}
         >
           Join the newsletter community <ChevronRight className="ml-2" />
         </button>
