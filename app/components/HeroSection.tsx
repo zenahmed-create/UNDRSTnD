@@ -69,6 +69,7 @@ export default function HeroSection() {
           rel="noopener noreferrer"
           className="
             bg-gradient-to-b from-gray-900 to-gray-800 
+            hover:bg-gradient-to-b hover:from-[#ff5c00] hover:to-[#ff5c00]
             text-white text-lg font-semibold
             px-8 py-4 rounded-md
             shadow-md hover:shadow-lg

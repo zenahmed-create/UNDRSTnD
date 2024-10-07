@@ -136,7 +136,12 @@ export default function NewsletterSignupForm({ onClose }: Props) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800 disabled:opacity-50"
+                className="
+                  px-4 py-2 bg-gray-900 text-white rounded
+                  hover:bg-[#ff5c00]
+                  transition-colors duration-300 ease-in-out
+                  disabled:opacity-50 disabled:hover:bg-gray-900
+                "
               >
                 {isSubmitting ? 'Submitting...' : 'Subscribe'}
               </button>
