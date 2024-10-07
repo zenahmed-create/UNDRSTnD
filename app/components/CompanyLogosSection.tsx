@@ -16,19 +16,19 @@ export default function PopularUseCasesSection() {
   const useCases: UseCase[] = [
     {
       front: "Master new concepts quickly",
-      back: "Our AI breaks down difficult concepts into easy-to-understand explanations."
+      back: "Ben breaks down difficult concepts into easy-to-understand explanations."
     },
     {
       front: "Enhance reading comprehension",
-      back: "Improve your understanding of texts with contextualized AI-powered summaries and insights."
+      back: "Ben improves your understanding of texts with contextualized summaries and insights."
     },
     {
-      front: "Instant insights fron real-time browsing",
-      back: "Gain instant insights while browsing any webpage in real-time without leaving the site."
+      front: "Instant insights from real-time browsing",
+      back: "Gain instant insights with Ben on any webpage in real-time without leaving the site."
     },
     {
       front: "Boost productivity while learning",
-      back: "Save time and stay focused on the most important things."
+      back: "Ben keeps you focused while you power through your learning."
     }
   ];
 
