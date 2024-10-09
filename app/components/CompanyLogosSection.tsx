@@ -24,11 +24,11 @@ export default function PopularUseCasesSection() {
     },
     {
       front: "Google & ChatGPT are great, but they're actually really inefficient",
-      back: "Ben gives you instant insights and answers without needing to open new tabs or write long prompts."
+      back: "Ben gives you instant answers without needing additional tools."
     },
     {
       front: "I want to feel like I'm actually learning what I'm reading",
-      back: "Ben provides instant satisfaction by giving you the answers you need to keep moving forward."
+      back: "Ben provides instant answers to keep you moving forward and engaged."
     }
   ];
 
