@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "UNDRSTnD",
   description: "Get Smarter, Faster",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
