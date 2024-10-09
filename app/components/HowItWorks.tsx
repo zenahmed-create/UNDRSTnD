@@ -35,19 +35,19 @@ export default function HowItWorks() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative h-64 mb-6">
+              <div className="relative h-48 sm:h-56 md:h-64 mb-4">
                 <Image
                   src={step.image}
                   alt={step.title}
                   layout="fill"
-                  objectFit="cover"
-                  className="transition-opacity duration-300"
+                  objectFit="contain"
+                  className="transition-opacity duration-300 p-4"
                   style={{ opacity: hoveredIndex === index ? 0.8 : 1 }}
                 />
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.content}</p>
+              <div className="p-4 sm:p-6 text-center">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{step.content}</p>
               </div>
             </div>
           ))}
