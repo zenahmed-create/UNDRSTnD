@@ -3,6 +3,7 @@
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import CompanyLogosSection from './components/CompanyLogosSection';
+import HowItWorks from './components/HowItWorks';
 import FeaturesSection from './components/FeaturesSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import CTASection from './components/CTASection';
@@ -16,6 +17,7 @@ export default function HomePage() {
         <HeroSection />
         <MainTestimonial />
         <CompanyLogosSection />
+        <HowItWorks />
         <FeaturesSection />
         <TestimonialsSection />
         <CTASection />
