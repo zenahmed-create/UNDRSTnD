@@ -15,20 +15,20 @@ export default function PopularUseCasesSection() {
 
   const useCases: UseCase[] = [
     {
-      front: "Master new concepts quickly",
-      back: "Ben breaks down difficult concepts into easy-to-understand explanations."
+      front: "I need to understand new topics or concepts quickly",
+      back: "Ben breaks down concepts into easy-to-understand explanations."
     },
     {
-      front: "Enhance reading comprehension",
-      back: "Ben improves your understanding of texts with contextualized summaries and insights."
+      front: "I hate opening so many new tabs to try to understand a new concept",
+      back: "Ben keeps you on the same page while you power through your learning."
     },
     {
-      front: "Instant insights from real-time browsing",
-      back: "Gain instant insights with Ben on any webpage in real-time without leaving the site."
+      front: "Google & ChatGPT are great, but they're actually really inefficient",
+      back: "Ben gives you instant insights and answers without needing to open new tabs or write long prompts."
     },
     {
-      front: "Boost productivity while learning",
-      back: "Ben keeps you focused while you power through your learning."
+      front: "I want to feel like I'm actually learning what I'm reading",
+      back: "Ben provides instant satisfaction by giving you the answers you need to keep moving forward."
     }
   ];
 
@@ -65,7 +65,7 @@ export default function PopularUseCasesSection() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
-        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Click a tile to learn how Ben can help you</h3>
+        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Click A Tile That Best Describes You</h3>
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-8">
           <div className="w-full md:w-1/2">
             <div className="grid grid-cols-2 gap-8">

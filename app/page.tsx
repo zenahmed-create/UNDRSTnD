@@ -6,6 +6,7 @@ import CompanyLogosSection from './components/CompanyLogosSection';
 import FeaturesSection from './components/FeaturesSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import CTASection from './components/CTASection';
+import MainTestimonial from './components/MainTestimonial';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
+        <MainTestimonial />
         <CompanyLogosSection />
         <FeaturesSection />
         <TestimonialsSection />
