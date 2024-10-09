@@ -16,7 +16,7 @@ const steps = [
   {
     title: 'Step 3',
     content: 'Receive back a personalized popup with the meaning of the highlighted text',
-    image: '/howitworksimage3.png',
+    image: '/howitworksimage4.png',
   },
 ];
 
